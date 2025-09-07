@@ -10,4 +10,11 @@ export default defineConfig({
       "application/javascript": ["js", "mjs", "cjs"],
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
 });
