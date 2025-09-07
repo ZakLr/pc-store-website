@@ -10,19 +10,27 @@ export default function Filters({
   availability,
   setAvailability,
 }) {
-  const categories = ["All", "Electronics", "Clothing", "Books", "Toys"];
+  const categories = [
+    "All",
+    "Laptop",
+    "Gaming-Laptop",
+    "Desktop",
+    "Monitor",
+    "Accessory",
+    "Component",
+  ];
   const years = Array.from({ length: 55 }, (_, i) => 2024 - i);
 
   return (
-    <div className="w-full p-4 bg-white rounded-xl shadow-md border border-gray-200">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div className="w-full p-6 bg-[var(--color-background)] rounded-xl shadow-[var(--color-shadow)] border border-[var(--color-border)]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {/* Category Filter */}
         <div className="w-full">
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label className="block text-base font-semibold text-[var(--color-text)] mb-2">
             Catégorie
           </label>
           <select
-            className="w-full p-2.5 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 focus:ring-2 focus:ring-primary focus:border-primary transition-colors duration-200"
+            className="w-full p-3 h-12 border border-[var(--color-border)] rounded-lg bg-[var(--color-background-secondary)] text-[var(--color-text)] text-base focus:ring-2 focus:ring-[var(--color-accent)] focus:border-[var(--color-accent)] transition-colors duration-200 hover:border-[var(--color-accent)]"
             value={category}
             onChange={(e) => setCategory(e.target.value)}
           >
@@ -36,11 +44,11 @@ export default function Filters({
 
         {/* Price Sort Filter */}
         <div className="w-full">
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label className="block text-base font-semibold text-[var(--color-text)] mb-2">
             Trier par prix
           </label>
           <select
-            className="w-full p-2.5 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 focus:ring-2 focus:ring-primary focus:border-primary transition-colors duration-200"
+            className="w-full p-3 h-12 border border-[var(--color-border)] rounded-lg bg-[var(--color-background-secondary)] text-[var(--color-text)] text-base focus:ring-2 focus:ring-[var(--color-accent)] focus:border-[var(--color-accent)] transition-colors duration-200 hover:border-[var(--color-accent)]"
             value={priceSort}
             onChange={(e) => setPriceSort(e.target.value)}
           >
@@ -52,11 +60,11 @@ export default function Filters({
 
         {/* Year Filter */}
         <div className="w-full">
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label className="block text-base font-semibold text-[var(--color-text)] mb-2">
             Année
           </label>
           <select
-            className="w-full p-2.5 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 focus:ring-2 focus:ring-primary focus:border-primary transition-colors duration-200"
+            className="w-full p-3 h-12 border border-[var(--color-border)] rounded-lg bg-[var(--color-background-secondary)] text-[var(--color-text)] text-base focus:ring-2 focus:ring-[var(--color-accent)] focus:border-[var(--color-accent)] transition-colors duration-200 hover:border-[var(--color-accent)]"
             value={year}
             onChange={(e) => setYear(e.target.value)}
           >
@@ -71,11 +79,11 @@ export default function Filters({
 
         {/* Availability Filter */}
         <div className="w-full">
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label className="block text-base font-semibold text-[var(--color-text)] mb-2">
             Disponibilité
           </label>
           <select
-            className="w-full p-2.5 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 focus:ring-2 focus:ring-primary focus:border-primary transition-colors duration-200"
+            className="w-full p-3 h-12 border border-[var(--color-border)] rounded-lg bg-[var(--color-background-secondary)] text-[var(--color-text)] text-base focus:ring-2 focus:ring-[var(--color-accent)] focus:border-[var(--color-accent)] transition-colors duration-200 hover:border-[var(--color-accent)]"
             value={availability}
             onChange={(e) => setAvailability(e.target.value)}
           >

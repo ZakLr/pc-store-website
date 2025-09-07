@@ -20,7 +20,7 @@ const Card = ({ product }) => {
   });
 
   const imageFit = useBreakpointValue({
-    base: "contain",
+    base: "cover",
     sm: "cover",
   });
 
@@ -74,12 +74,18 @@ const Card = ({ product }) => {
             fontSize={{ base: "md", sm: "lg", md: "xl" }}
             fontWeight="semibold"
             color="gray.800"
+            fontFamily="Poppins, sans-serif"
           >
             {product.name}
           </Text>
 
-          <Text fontSize={{ base: "sm", sm: "md" }} color="gray.500">
-            {product.price / 100} DZD
+          <Text
+            fontSize={{ base: "sm", sm: "md" }}
+            color="gray.700"
+            fontFamily="Roboto, sans-serif"
+            fontWeight="500"
+          >
+            {(product.price / 100).toFixed(2)} DZD
           </Text>
 
           <Badge
@@ -95,12 +101,11 @@ const Card = ({ product }) => {
           <Button
             as={Link}
             to={`/product/${product.id}`}
-            color={"slateblue.800"}
+            className="bg-accent !text-primary"
             size="sm"
             w="full"
             fontSize={{ base: "sm", md: "md" }}
-            _hover={{ bg: "#A68A64", color: "white" }}
-            
+            _hover={{ bg: "#63b3ed", color: "#0f1419" }}
           >
             View Details
           </Button>

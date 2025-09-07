@@ -11,10 +11,10 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import Card from "./Card";
-import { sampleClothingProducts } from "./sampleClothingProducts";
+import { sampleComputersProducts } from "./sampleComputersProducts";
 
 export default function Feed({ title, limit }) {
-  const [products] = React.useState(sampleClothingProducts);
+  const [products] = React.useState(sampleComputersProducts);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -70,7 +70,7 @@ export default function Feed({ title, limit }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="bg-background"
+      className="bg-background-secondary"
     >
       <Box
         px={{ base: 4, sm: 6, md: 8 }}
@@ -92,10 +92,10 @@ export default function Feed({ title, limit }) {
             textAlign={{ base: "center", md: "left" }}
           >
             <Heading
-              fontFamily="Playfair Display"
+              fontFamily="Montserrat, sans-serif"
               fontSize={headingFontSize}
               fontWeight="bold"
-              color="gray.800"
+              className="text-accent"
             >
               {title}
             </Heading>
@@ -105,10 +105,10 @@ export default function Feed({ title, limit }) {
               fontSize={linkFontSize}
               fontWeight="semibold"
               _hover={{ textDecoration: "underline" }}
-              transition="color 0.2s"
-              className="text-white"
+              className="!text-white"
+              fontFamily="Inter, sans-serif"
             >
-              Voir la Collection →
+              Voir la collection PC →
             </ChakraLink>
           </VStack>
         </motion.div>

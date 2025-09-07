@@ -22,27 +22,23 @@ const MotionBox = chakra(motion.div);
 export default function AddedValues() {
   const values = [
     {
-      title: "Premium Materials",
-      description:
-        "Only the finest fabrics and materials for a truly luxurious feel.",
+      title: "Fast Delivery",
+      description: "Express shipping on PCs, laptops, and accessories.",
       icon: <FaShippingFast size={40} />,
     },
     {
-      title: "Timeless Style",
-      description:
-        "Classic designs that never go out of fashion—old money elegance.",
+      title: "Best Prices",
+      description: "Competitive tech deals with transparent pricing.",
       icon: <FaDollarSign size={40} />,
     },
     {
-      title: "Personalized Service",
-      description:
-        "Our team is dedicated to providing a bespoke shopping experience.",
+      title: "Expert Support",
+      description: "Guidance for builds, upgrades, and troubleshooting.",
       icon: <FaHeadset size={40} />,
     },
     {
-      title: "Secure Payment",
-      description:
-        "Your information is always protected with industry-leading security.",
+      title: "Secure Warranty",
+      description: "Safe checkout and manufacturer-backed warranty.",
       icon: <FaShieldAlt size={40} />,
     },
   ];
@@ -116,11 +112,11 @@ export default function AddedValues() {
           <Heading
             textAlign="center"
             className="text-primary"
-            fontFamily="Playfair Display"
+            fontFamily="Montserrat, sans-serif"
             fontSize={headingSize}
             mb={4}
           >
-            Nos Valeurs Ajoutées
+            Nos Avantages Tech
           </Heading>
         </MotionBox>
 
@@ -156,10 +152,15 @@ export default function AddedValues() {
                 fontWeight="semibold"
                 className="text-primary"
                 mb={2}
+                fontFamily="Poppins, sans-serif"
               >
                 {value.title}
               </Text>
-              <Text fontSize={{ base: "sm", sm: "md" }} color="gray.600">
+              <Text
+                fontSize={{ base: "sm", sm: "md" }}
+                color="gray.600"
+                fontFamily="Inter, sans-serif"
+              >
                 {value.description}
               </Text>
             </MotionBox>

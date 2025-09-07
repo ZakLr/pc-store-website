@@ -103,12 +103,12 @@ export default function Reviews() {
       viewport={{ once: true, margin: "-100px" }}
       style={{
         backgroundImage:
-          "url('https://plus.unsplash.com/premium_photo-1664202525979-80d1da46b34b?q=80&w=1471&auto=format&fit=crop')",
+          "url('https://images.pexels.com/photos/3861962/pexels-photo-3861962.jpeg?auto=compress&cs=tinysrgb&w=1600')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundBlendMode: "overlay",
       }}
-      className="bg-slate-800"
+      className="bg-slate-900"
     >
       <Box
         bgGradient="linear(to-b, rgba(0,0,0,0.7), rgba(0,0,0,0.9))"
@@ -126,13 +126,18 @@ export default function Reviews() {
               as="h2"
               fontSize={{ base: "3xl", sm: "4xl", lg: "5xl" }}
               fontWeight="bold"
-              className="text-secondary"
-              fontFamily="Playfair Display, serif"
+              className="text-accent"
+              fontFamily="Montserrat, sans-serif"
             >
-              Voix de Nos Clients
+              Avis de Nos Clients
             </Heading>
-            <Text mt={3} fontSize="lg" className="text-white">
-              L’élégance célébrée par notre clientèle distinguée.
+            <Text
+              mt={3}
+              fontSize="lg"
+              className="text-white"
+              fontFamily="Inter, sans-serif"
+            >
+              La puissance et la fiabilité, validées par nos clients.
             </Text>
           </motion.div>
 
@@ -173,11 +178,15 @@ export default function Reviews() {
                           as="h6"
                           fontSize="lg"
                           color="gray.800"
-                          fontFamily="Playfair Display, serif"
+                          fontFamily="Poppins, sans-serif"
                         >
                           {review.name}
                         </Heading>
-                        <Text fontSize="sm" color="gray.500">
+                        <Text
+                          fontSize="sm"
+                          color="gray.500"
+                          fontFamily="Inter, sans-serif"
+                        >
                           {review.role}
                         </Text>
                       </VStack>
@@ -200,6 +209,7 @@ export default function Reviews() {
                       color="gray.700"
                       fontStyle="italic"
                       mt={2}
+                      fontFamily="Lato, sans-serif"
                     >
                       "{review.feedback}"
                     </Text>

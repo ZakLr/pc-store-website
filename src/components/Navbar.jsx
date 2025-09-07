@@ -30,13 +30,13 @@ const Navbar = () => {
 
   // Color palette
   const colors = {
-    primary: "#8B6F47", // Darker gold for better contrast
-    primaryHover: "#6B5637",
-    secondary: "#F8F5F0", // Light cream background
-    text: "#333333", // Dark gray for text
-    lightText: "#666666",
-    border: "#E0D6C8", // Light gold border
-    background: "#FFFFFF",
+    primary: "#1a365d",
+    primaryHover: "#2b77e6",
+    secondary: "#2d3748",
+    text: "#f7fafc",
+    lightText: "#a0aec0",
+    border: "#2d3748",
+    background: "#0f1419",
   };
 
   useEffect(() => {
@@ -81,9 +81,9 @@ const Navbar = () => {
   };
 
   const menuData = [
-    { id: 1, title: "Accueil", path: "/" },
-    { id: 2, title: "Collection", path: "/products" },
-    { id: 3, title: "Notre Héritage", path: "/about" },
+    { id: 1, title: "Home", path: "/" },
+    { id: 2, title: "Shop PCs", path: "/products" },
+    { id: 3, title: "About Us", path: "/about" },
   ];
 
   return (
@@ -114,7 +114,7 @@ const Navbar = () => {
         <Box
           sx={{
             width: "100%",
-            
+
             px: { xs: 2, sm: 3, md: 4 },
             py: 3,
           }}
@@ -127,16 +127,23 @@ const Navbar = () => {
             <Link
               to="/"
               style={{
-                fontSize: isMobile ? "1.25rem" : "1.75rem",
-                fontWeight: 700,
-                color: colors.primary,
-                fontFamily: "Playfair Display, serif",
+                fontSize: isMobile ? "1.5rem" : "2rem",
+                fontWeight: 400,
+                fontFamily: "DM Serif Display, serif",
                 textDecoration: "none",
-                letterSpacing: "0.5px",
+                letterSpacing: "1px",
+                textShadow: "0 2px 4px rgba(0,0,0,0.1)",
+                background:
+                  "linear-gradient(135deg, #1a365d 0%, #2b77e6 50%, #63b3ed 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+                filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.1))",
+                transition: "all 0.3s ease",
               }}
-              className="text-5xl"
+              className="text-5xl !text-accent hover:scale-105 transform transition-all duration-300 hover:drop-shadow-lg"
             >
-              L'Élégance Intemporelle
+              PC Store
             </Link>
 
             <Stack
@@ -159,6 +166,7 @@ const Navbar = () => {
                       fontWeight: 500,
                       textDecoration: "none",
                       transition: "color 0.3s ease",
+                      fontFamily: "Inter, sans-serif",
                       "&:hover": {
                         color: colors.primary,
                       },
@@ -298,7 +306,7 @@ const Navbar = () => {
             <Typography
               variant="h5"
               sx={{
-                fontFamily: "Playfair Display, serif",
+                fontFamily: "Poppins, sans-serif",
                 color: colors.text,
                 fontWeight: 600,
               }}
@@ -365,7 +373,7 @@ const Navbar = () => {
                   />
                 }
               >
-                {cartItems.map((product) => (
+                {cartItems.map((product, index) => (
                   <Stack
                     key={product.id}
                     direction="row"
@@ -396,7 +404,7 @@ const Navbar = () => {
                         variant="body2"
                         sx={{ color: colors.lightText, mt: 0.5 }}
                       >
-                        ${(product.price || 0).toFixed(2)} ×{" "}
+                        {((product.price || 0) / 100).toFixed(2)} DZD ×{" "}
                         {product.quantity || 1}
                       </Typography>
                     </Box>
@@ -405,10 +413,11 @@ const Navbar = () => {
                         variant="subtitle1"
                         sx={{ color: colors.text, fontWeight: 600 }}
                       >
-                        $
                         {(
-                          (product.price || 0) * (product.quantity || 1)
-                        ).toFixed(2)}
+                          ((product.price || 0) * (product.quantity || 1)) /
+                          100
+                        ).toFixed(2)}{" "}
+                        DZD
                       </Typography>
                       <Button
                         variant="text"
@@ -421,7 +430,7 @@ const Navbar = () => {
                             textDecoration: "underline",
                           },
                         }}
-                        onClick={() => removeItem(product.id)}
+                        onClick={() => removeItem(index)}
                       >
                         Retirer
                       </Button>
@@ -452,14 +461,14 @@ const Navbar = () => {
                     variant="subtitle1"
                     sx={{ color: colors.text, fontWeight: 700 }}
                   >
-                    {cartItems
-                      .reduce(
+                    {(
+                      cartItems.reduce(
                         (acc, item) =>
                           acc + (item.price || 0) * (item.quantity || 1),
                         0
-                      )
-                      .toFixed(2)}{" "}
-                    USD
+                      ) / 100
+                    ).toFixed(2)}{" "}
+                    DZD
                   </Typography>
                 </Stack>
                 <Button
@@ -541,7 +550,7 @@ const Navbar = () => {
           <Typography
             variant="h6"
             sx={{
-              fontFamily: "Playfair Display, serif",
+              fontFamily: "Poppins, sans-serif",
               color: colors.text,
               mb: 4,
               fontWeight: 600,

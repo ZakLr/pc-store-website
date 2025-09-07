@@ -1,20 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Orbitron:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Orbitron:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Raleway:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700;800&family=Lato:wght@300;400;700;900&family=Nunito:wght@300;400;600;700;800&display=swap");
 @import "tailwindcss";
 
 @theme {
-    --font-playfair: 'Playfair Display', serif;
-    --color-primary: #2c3e50;      /* Navy Blue */
-    --color-secondary: #fadcac;    /* Muted Taupe */
-    --color-accent: #fccb32;       /* Gold Accent */
-    --color-background: #A68A64;   /* Beige */
-    --color-background-secondary: #461916;   /* Beige */
-    --color-text: #2c3e50;         /* Navy for text */
-    --color-border: #e7e1d6;       /* Soft border taupe */
-    --color-shadow: rgba(44, 62, 80, 0.1); /* Soft navy shadow */
-}
-body{
-  max-width: 100vw;
-  overflow-x: hidden; /* Navy for text */
-  font-family: 'Playfair Display', serif;
+  /* Font families */
+  --font-playfair: "Playfair Display", serif;
+  --font-inter: "Inter", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-raleway: "Raleway", sans-serif;
+  --font-open-sans: "Open Sans", sans-serif;
+  --font-lato: "Lato", sans-serif;
+  --font-nunito: "Nunito", sans-serif;
+  --font-dm-serif: "DM Serif Display", serif;
+  --font-libre: "Libre Baskerville", serif;
+  --font-orbitron: "Orbitron", monospace;
 
+  /* Professional dark theme */
+  --color-primary: #1a365d; /* Dark blue */
+  --color-secondary: #2d3748; /* Dark gray */
+  --color-accent: #63b3ed; /* Light blue accent */
+  --color-background: #0f1419; /* Very dark background */
+  --color-background-secondary: #1a202c; /* Dark gray background */
+  --color-text: #f7fafc; /* Light text */
+  --color-border: #2d3748; /* Dark border */
+  --color-shadow: rgba(0, 0, 0, 0.3); /* Dark shadow */
+}
+
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: var(--font-inter);
 }

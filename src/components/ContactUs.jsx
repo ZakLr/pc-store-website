@@ -39,7 +39,7 @@ export default function ContactUs() {
         textAlign="center"
         mb={12}
         fontSize={{ base: "2xl", sm: "3xl", md: "4xl" }}
-        fontFamily="Playfair Display"
+        fontFamily="Montserrat, sans-serif"
         color="gray.700"
       >
         Contactez-Nous
@@ -66,20 +66,30 @@ export default function ContactUs() {
         >
           <HStack align="start" spacing={4}>
             <Icon as={FaMapMarkerAlt} boxSize={5} color="gray.600" />
-            <Text color="gray.700">123 Avenue, Algiers, Algeria</Text>
+            <Text color="gray.700" fontFamily="Inter, sans-serif">
+              123 Avenue, Algiers, Algeria
+            </Text>
           </HStack>
 
           <HStack spacing={4}>
             <Icon as={FaPhone} boxSize={5} color="gray.600" />
-            <Link href="tel:+213123456789" color="blue.500">
+            <Link
+              href="tel:+213123456789"
+              color="blue.500"
+              fontFamily="Roboto, sans-serif"
+            >
               +213 123 456 789
             </Link>
           </HStack>
 
           <HStack spacing={4}>
             <Icon as={FaEnvelope} boxSize={5} color="gray.600" />
-            <Link href="mailto:info@yourbrand.com" color="blue.500">
-              info@yourbrand.com
+            <Link
+              href="mailto:support@techhub-dz.dz"
+              color="blue.700"
+              fontFamily="Roboto, sans-serif"
+            >
+              support@techhub-dz.dz
             </Link>
           </HStack>
 

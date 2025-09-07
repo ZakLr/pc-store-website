@@ -11,15 +11,15 @@ import ContactUs from "@/components/ContactUs";
 
 const Home = () => {
   return (
-    <div className=" w-[100vw]  min-h-[100vh]" style={{paddingRight: "20px"}}>
-        <Navbar />
-        <Hero /> 
-        <Feed title="Meilleures Ventes" limit={4} />
-        <AddedValues />
-        <Feed title="Derniers Produits" limit={4} />
-        <Reviews />
-        <ContactUs />
-        <Footer />
+    <div className=" w-[100vw]  min-h-[100vh]" style={{ paddingRight: "20px" }}>
+      <Navbar />
+      <Hero />
+      <Feed title="Best Sellers PCs" limit={4} />
+      <AddedValues />
+      <Feed title="New Arrivals Tech" limit={4} />
+      <Reviews />
+      <ContactUs />
+      <Footer />
     </div>
   );
 };

@@ -52,7 +52,7 @@ const Footer = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
-      className="w-full bg-slate-900 text-white"
+      className="w-full bg-slate-800 text-white"
     >
       <Box
         maxW="7xl"
@@ -73,18 +73,18 @@ const Footer = () => {
                   as="h3"
                   fontSize={{ base: "2xl", md: "3xl" }}
                   fontWeight="bold"
-                  color="#A68A64"
-                  fontFamily="Playfair Display, serif"
+                  color="#63b3ed"
+                  fontFamily="Montserrat, sans-serif"
                 >
-                  L&apos;Élégance Intemporelle
+                  PC Store
                 </Heading>
                 <Text
                   mt={4}
                   fontSize={{ base: "sm", md: "md" }}
                   color="gray.400"
+                  fontFamily="Inter, sans-serif"
                 >
-                  Un héritage de raffinement, tissé dans chaque fil de nos
-                  créations.
+                  PCs, laptops, and gear for every creator and gamer.
                 </Text>
               </Box>
             </motion.div>
@@ -96,11 +96,11 @@ const Footer = () => {
                   as="h4"
                   fontSize="xl"
                   fontWeight="semibold"
-                  color="#A68A64"
-                  fontFamily="Playfair Display, serif"
+                  color="#63b3ed"
+                  fontFamily="Raleway, sans-serif"
                   mb={4}
                 >
-                  Explorer
+                  Parcourez
                 </Heading>
                 <VStack
                   as="nav"
@@ -109,18 +109,19 @@ const Footer = () => {
                   color="gray.400"
                 >
                   {[
-                    { to: "/collection", text: "Collection" },
-                    { to: "/about", text: "Notre Héritage" },
-                    { to: "/services", text: "Services sur Mesure" },
-                    { to: "/gallery", text: "Galerie d’Artisanat" },
-                    { to: "/contact", text: "Nous Contacter" },
+                    { to: "/", text: "Accueil" },
+                    { to: "/products", text: "PCs & Laptops" },
+                    { to: "/about", text: "À propos" },
+                    { to: "/services", text: "Services" },
+                    { to: "/gallery", text: "Galerie" },
+                    { to: "/contact", text: "Contact" },
                   ].map((link) => (
                     <ChakraLink
                       key={link.text}
                       as={Link}
                       to={link.to}
                       fontSize="sm"
-                      _hover={{ color: "#A68A64", textDecoration: "none" }}
+                      _hover={{ color: "#63b3ed", textDecoration: "none" }}
                     >
                       {link.text}
                     </ChakraLink>
@@ -136,8 +137,8 @@ const Footer = () => {
                   as="h4"
                   fontSize="xl"
                   fontWeight="semibold"
-                  color="#A68A64"
-                  fontFamily="Playfair Display, serif"
+                  color="#63b3ed"
+                  fontFamily="Raleway, sans-serif"
                   mb={4}
                 >
                   Nous Trouver
@@ -150,13 +151,13 @@ const Footer = () => {
                 >
                   <Text>123 Rue du Luxe, Alger, Algérie</Text>
                   <Text>Tél: +213 123 456 789</Text>
-                  <Text>Email: contact@elegance-intemporelle.dz</Text>
+                  <Text>Email: contact@techhub-dz.dz</Text>
                   <ChakraLink
                     as={Link}
                     to="/stores"
-                    color="#A68A64"
+                    color="#63b3ed"
                     mt={2}
-                    _hover={{ color: "#8B6F47", textDecoration: "none" }}
+                    _hover={{ color: "#2b77e6", textDecoration: "none" }}
                   >
                     Localiser Nos Boutiques
                   </ChakraLink>
@@ -213,8 +214,7 @@ const Footer = () => {
                   fontWeight="medium"
                   maxW="full"
                 >
-                  © {new Date().getFullYear()} L’Élégance Intemporelle. Tous
-                  droits réservés.
+                  © {new Date().getFullYear()} PC Store. Tous droits réservés.
                 </Text>
               </Flex>
             </motion.div>
